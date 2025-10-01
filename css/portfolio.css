@@ -1,0 +1,344 @@
+:root {
+  --primary-color: #1a365d;
+  --secondary-color: #2a4a7f;
+  --accent-color: #e9b949;
+  --light-color: #f8f9fa;
+  --dark-color: #2d3748;
+  --text-color: #333;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Tajawal", sans-serif;
+}
+
+body {
+  font-family: "Tahoma", sans-serif;
+  background: white;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+  flex: 1; /* يدفع الفوتر للأسفل */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  direction: rtl;
+  height: 70px;
+}
+
+header .logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .logo img {
+  height: 80px;
+}
+
+header nav {
+  display: flex;
+  gap: 25px;
+  font-weight: 600;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #4a5edb;
+}
+
+header .search-icon {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+h2.title {
+  font-weight: normal;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.underline-container {
+  position: relative;
+  width: 160px;
+  margin: 0 auto 40px;
+}
+
+.underline {
+  border-top: 1px solid #ccc;
+  margin: 0;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 12px solid #e6c84d;
+  position: absolute;
+  left: 50%;
+  top: -8px;
+  transform: translateX(-50%);
+  
+}
+
+.card {
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #222;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-image1 {
+  width: 100%; 
+  height: auto; 
+  display: block;
+  /* position: relative; */
+  height: 700px;
+  background: url("../assets/images/image-17.webp")
+    center center/cover no-repeat;
+  border-radius: 12px 12px 0 0;
+}
+
+.card-image2 {
+  width: 100%; 
+  height: auto;
+  display: block;
+  height: 700px;
+  background: url("../assets/images/image-21.webp")
+    center center/cover no-repeat;
+  border-radius: 12px 12px 0 0;
+}
+.card-image3 {
+  width: 100%; 
+  height: auto; 
+  display: block;
+  height: 700px;
+  background: url("../assets/images/image-15.webp")
+    center center/cover no-repeat;
+  border-radius: 12px 12px 0 0;
+}
+.card-image4 {
+  width: 100%; 
+  height: auto; 
+  display: block;
+  height: 700px;
+  background: url("../assets/images/image-16.webp")
+    center center/cover no-repeat;
+  border-radius: 12px 12px 0 0;
+}
+.card-image5 {
+  width: 100%; 
+  height: auto; 
+  display: block;
+  height: 700px;
+  background: url("../assets/images/image-14.webp")
+    center center/cover no-repeat;
+  border-radius: 12px 12px 0 0;
+}
+.card-image6 {
+  width: 100%; 
+  height: auto;
+  display: block;
+  height: 700px;
+  background: url("../assets/images/image-10.webp")
+    center center/cover no-repeat;
+  border-radius: 12px 12px 0 0;
+}
+.card-image7 {
+  width: 100%; 
+  height: auto; 
+  display: block;
+  height: 700px;
+  background: url("../assets/images/image-5.webp")
+    center center/cover no-repeat;
+  border-radius: 12px 12px 0 0;
+}
+.card-image8 {
+  width: 100%;
+  height: auto;
+  display: block;
+  height: 700px;
+  background: url("../assets/images/image-9.webp")
+    center center/cover no-repeat;
+  border-radius: 12px 12px 0 0;
+}
+.card-image9 {
+  width: 100%; 
+  height: auto; 
+  display: block;
+  height: 700px;
+  background: url("../assets/images/image-4.webp") center center/cover no-repeat;
+  border-radius: 12px 12px 0 0;
+}
+.card-image10 {
+  width: 100%; 
+  height: auto; 
+  display: block;
+  height: 700px;
+  background: url("../assets/images/image-3.webp") center center/cover no-repeat;
+  border-radius: 12px 12px 0 0;
+}
+.card-image11 {
+  width: 100%; 
+  height: auto; 
+  display: block;
+  height: 700px;
+  background: url("../assets/images/image-34.webp") center center/cover no-repeat;
+  border-radius: 12px 12px 0 0;
+}
+.card-image12 {
+  width: 100%; 
+  height: auto; 
+  display: block;
+  height: 700px;
+  background: url("../assets/images/image-32.webp") center center/cover no-repeat;
+  border-radius: 12px 12px 0 0;
+}
+
+.description {
+  background: #fff;
+  padding: 30px 25px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 0 0 12px 12px;
+}
+
+.description h3 {
+  margin: 0 0 15px;
+  font-weight: normal;
+  font-size: 24px;
+  text-align: center;
+}
+
+.description h1,
+.description h3,
+.description p,
+.description a {
+  color: #213d76; /* خلي اللون موحد */
+  text-decoration: none; /* شيل الخط تحت اللينك */
+}
+.description a {
+  color: #213d76; /* نفس لون النص */
+  text-decoration: underline; /* يظهر خط تحت الكلام */
+  font-weight: normal;
+  cursor: pointer; /* يظهر شكل اليد عند المرور */
+}
+
+.description a:hover {
+  color: #e6c84d; /* يتغير للون ده عند المرور بالماوس */
+  text-decoration: underline; /* يفضل الخط تحت */
+}
+
+/* Fixed floating buttons */
+.floating-call,
+.floating-whatsapp {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 28px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-call {
+  background-color: #0047ab;
+  bottom: 140px;
+}
+
+.floating-whatsapp {
+  background-color: #25d366;
+}
+
+.contact-buttons {
+  position: fixed;
+  top: 80%;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.contact-buttons a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px; /* يدي شكل مربع بحواف ناعمة */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  text-decoration: none;
+}
+
+.contact-buttons a:hover {
+  transform: scale(1.1);
+}
+
+.phone {
+  background: white;
+  color: #0066ff; /* أزرق */
+}
+
+.whatsapp {
+  background: #25d366; /* أخضر واتساب */
+  color: white;
+}
+
+.contact-buttons i {
+  font-size: 24px;
+}
