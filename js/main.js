@@ -1,62 +1,55 @@
-// تنشيط القائمة المتنقلة
+// Mobile menu toggle
 const mobileToggle = document.querySelector('.mobile-toggle');
 const navMenu = document.querySelector('.nav-menu');
+mobileToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
 
-mobileToggle.addEventListener('click', () => {
-    mobileToggle.classList.toggle('active');
-    navMenu.classList.toggle('active');
+// Search
+const searchContainer = document.querySelector('.search-container');
+const searchIcon = document.querySelector('.search-icon');
+const searchInput = document.querySelector('.search-input');
+const searchBtn = document.querySelector('.search-btn');
+
+searchIcon.addEventListener('click', () => {
+  searchContainer.classList.toggle('active');
+  if(searchContainer.classList.contains('active')) searchInput.focus();
 });
 
-// إغلاق القائمة عند النقر على رابط
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
+searchBtn.addEventListener('click', () => {
+  const query = searchInput.value.trim();
+  if(query) window.location.href = `/Pages/portfolio.html?q=${encodeURIComponent(query)}`;
 });
 
-// كشف العناصر عند التمرير
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.service-card, .feature-item').forEach(el => {
-    observer.observe(el);
+searchInput.addEventListener('keypress', (e) => {
+  if(e.key === 'Enter') searchBtn.click();
 });
 
-// التحقق من النماذج
-if (document.getElementById('contactForm')) {
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // هنا سيتم إرسال البيانات إلى الخادم
-        const formData = new FormData(this);
-        
-        fetch('backend/send_message.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-            if (data === 'success') {
-                alert('شكراً لتواصلكم معنا! تم إرسال رسالتك بنجاح.');
-                this.reset();
-            } else {
-                alert('حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى.');
-        });
-    });
+// Slider
+const slides = document.querySelectorAll(".slides");
+const dotsContainer = document.querySelector(".dots");
+let index = 0;
+
+slides.forEach((_, i) => {
+  const dot = document.createElement("span");
+  if (i === 0) dot.classList.add("active");
+  dotsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll(".dots span");
+
+function showSlide(n) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    dots[i].classList.remove("active");
+    if (i === n) {
+      slide.classList.add("active");
+      dots[i].classList.add("active");
+    }
+  });
 }
+
+function nextSlide() {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+}
+
+setInterval(nextSlide, 3000);

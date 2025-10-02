@@ -37,6 +37,7 @@
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="./css/footer.css">
 <link rel="stylesheet" href="./css/responsive.css">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap">
 
@@ -91,7 +92,76 @@
       </a>
     </div>
   </div>
-  <!-- باقي الكروت تبقى كما هي (card2 - card8) -->
+<div class="card2">
+<div class="card-content">
+<h1>بيع أثاثك المستعمل بأفضل الأسعار</h1>
+<a href="./about/1.html">
+<p>
+<h2>  وفر وقتك وجهدك مع خدماتنا لبيع الأثاث المستعمل بالرياض. تقييم مجاني لكل قطعة وسداد فوري عند الاستلام، لضمان تجربة سلسة وآمنة.</h2>
+</p>
+</a>
+</div>
+</div>
+<div class="card3">
+<div class="card-content">
+<h1>تقييم سريع للأسعار وخدمة احترافية</h1>
+<a href="./about/8.html">
+<p>
+<h2>   نوفر لك خدمة تقييم أسعار الأثاث المستعمل في الرياض بشكل احترافي. اعرف القيمة الحقيقية لكل قطعة واحصل على أفضل العروض قبل البيع. </h2>
+</p>
+</a>
+</div>
+</div>
+<div class="card4">
+<div class="card-content">
+<h1>استلام الأثاث المستعمل من منزلك</h1>
+<a href="./about/11.html">
+<p>
+<h2>  نقدم خدمة استلام الأثاث المستعمل من أي مكان بالرياض، مع فريق متخصص لضمان النقل الآمن والدفع الفوري، لتجربة بيع سلسة ومريحة. </h2>
+</p>
+</a>
+</div>
+</div>
+<div class="card5">
+<div class="card-content">
+<h1>شراء غرف نوم مستعملة بالرياض</h1>
+<a href="./about/6.html">
+<p>
+<h2>نوفر خدمة شراء غرف النوم المستعملة بالرياض بحالة ممتازة وأسعار مناسبة، مع استلام سريع من منزلك ودفع فوري.</h2>
+</p>
+</a>
+</div>
+</div>
+<div class="card6">
+<div class="card-content">
+<h1>شراء مطابخ مستعملة بالرياض</h1>
+<a href="./about/7.html">
+<p>
+<h2>إذا كان لديك مطبخ مستعمل بحالة جيدة، نقدم لك أفضل عروض الشراء في الرياض مع خدمة نقل آمنة وسريعة.</h2>
+</p>
+</a>
+</div>
+</div>
+<div class="card7">
+<div class="card-content">
+<h1>شراء أجهزة كهربائية مستعملة بالرياض</h1>
+<a href="./about/10.html">
+<p>
+<h2>نشتري جميع أنواع الأجهزة الكهربائية المستعملة مثل الغسالات، الثلاجات، المكيفات والشاشات بأسعار مميزة وخدمة استلام فوري.</h2>
+</p>
+</a>
+</div>
+</div>
+<div class="card8">
+<div class="card-content">
+<h1>شراء معدات مطاعم مستعملة بالرياض</h1>
+<a href="./about/7.html">
+<p>
+<h2>نشتري معدات المطاعم المستعملة بالرياض مثل الأفران، الطاولات، والثلاجات الصناعية مع أسعار ممتازة ونقل احترافي.</h2>
+</p>
+</a>
+</div>
+</div>
 </section>
 
 <!-- FAQ -->
@@ -105,39 +175,105 @@
     <div class="question">كيف يمكنني بيع أثاثي؟</div>
     <div class="answer">يمكنك التواصل معنا عبر الهاتف أو الواتساب وإرسال صور الأثاث.</div>
   </div>
+  <div class="faq">
+<div class="question">3. هل توفرون خدمة نقل الأثاث بعد الشراء؟</div>
+<div class="answer">نعم، نوفر خدمة نقل الأثاث مجانًا بعد الاتفاق، ولا يتحمل العميل أي مصاريف إضافية.</div>
+</div>
+<div class="faq">
+<div class="question">4. هل أستطيع بيع جزء من الأثاث فقط وليس المنزل كامل؟</div>
+<div class="answer">بالطبع، يمكنك بيع أي قطعة أثاث أو جهاز بشكل منفصل دون الحاجة لبيع كل الأثاث.</div>
+</div>
+<div class="faq">
+<div class="question">5. ما هي المناطق التي تغطونها؟</div>
+<div class="answer">نحن نغطي جميع مناطق الرياض والمناطق القريبة، مع إمكانية التنسيق للاحياء الأخرى حسب الاتفاق.</div>
+</div>
 </section>
+<script>
+const faqs = document.querySelectorAll('.faq');
 
+faqs.forEach(faq => {
+  faq.addEventListener('click', () => {
+    faq.classList.toggle('active');
+  });
+});
+</script>
+<h2>نشتري أثاث مستعمل وأجهزة كهربائية شمال الرياض مكيفات ثلاجات شاشات غرف نوم مطابخ مستعملة بأفضل الأسعار بالرياض</h2>
+<div class="box">
+<p>للتواصل 0531229390 تم خدمة منشأة في الرياض، نحن شركة خدمات شراء أثاث مستعمل بالرياض، ونقدم لك أفضل الخدمات، مثل شراء غرف نوم، وثلاجات مستعملة بالرياض، ومكيفات، وشاشات تلفزيون، ومستلزمات المطبخ، والأدوات المنزلية، وتوفير خدمات البيع والتسويق للأثاث المستعمل، بطرق فعالة وموثوقة.</p>
+<a class="read-more" href="./about/1.html">اقرأ المزيد</a>
+</div>
+<div class="box">
+<p><strong>شراء اثاث مستعمل بالرياض</strong><br/>
+    نحن نشتري الاثاث المستعمل والأجهزة الكهربائية بعد بيع كل ما هو قديم من منزلك، وتقديم تسهيلات جمة وفوائد، نقدم خدمات بيع اجهزة منزلية مستعملة وسعر مناسب، لأننا نود أن يبقى أثاثك مستعملاً، وبأفضل الأسعار.</p>
+<a class="read-more" href="./about/2.html">اقرأ المزيد</a>
+</div>
+<div class="box">
+<p><strong>لماذا نحن أفضل شركة شراء اثاث مستعمل بالرياض</strong><br/>
+    نحن نتميز بتوفير خدمات بيع وشراء اثاث مستعمل وغيرها من الأجهزة والأثاث من الشركات والمتاجر، نحن شركة شراء اثاث مستعمل بالرياض، ونقدم خدمات التسليم في المملكة، نقدّم مقترحات ونتيح خدمات البيع بشكل محترف وسهل، ونضمن الحصول على أفضل الأسعار.</p>
+<a class="read-more" href="./about/13.html">اقرأ المزيد</a>
+</div>
+<div class="box">
+<p><strong>شراء اجهزة كهربائية في الرياض</strong><br/>
+    لدينا أفضل الأسعار، نقدم استشارات شراء اجهزة منزلية مستعملة، جميع الأجهزة متاحة عندنا، وتتوفر مجموعة من اجهزة منزلية مستعملة للبيع في الرياض بأسعار تنافسية، نقدم خدمات المشتري البسيطة والسريعة.</p>
+<a class="read-more" href="./about/10.html">اقرأ المزيد</a>
+</div>
+<div class="box">
+<p><strong>بيع وشراء معدات المطاعم المستعملة بالرياض</strong><br/>
+    نقدم خدمات بيع وشراء جميع معدات المطاعم المستعملة في الرياض، بما في ذلك معدات الطبخ، والثلاجات، وغيرها من الأدوات المستعملة، نحن الأفضل في توفير معدات مطاعم بأسعار منافسة.</p>
+<a class="read-more" href="./about/7.html">اقرأ المزيد</a>
+</div>
+<div class="box1">
+<a class="load-more" href="./Pages/about.html">المزيد</a>
+</div>
+
+<div class="contact-buttons">
+<a class="phone" href="tel:+966531229390">
+<i class="fas fa-phone"></i>
+</a>
+<a class="whatsapp" href="https://wa.me/966531229390" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+</div>
 <!-- Footer -->
 <footer>
-  <div class="footer-container">
-    <div class="footer-content">
-      <div class="footer-section">
-        <div class="footer-logo"><span>لقايا</span></div>
-        <p>متخصصون في شراء الأثاث المستعمل بالرياض بأفضل الأسعار مع خدمة نقل مجانية.</p>
-      </div>
-      <div class="footer-section">
-        <h3>روابط سريعة</h3>
-        <ul class="footer-links">
-          <li><a href="./index.html">الرئيسية</a></li>
-          <li><a href="./Pages/about.html">المدونة</a></li>
-          <li><a href="./Pages/services.html">خدماتنا</a></li>
-          <li><a href="./Pages/portfolio.html">أعمالنا</a></li>
-          <li><a href="./Pages/contact.html">اتصل بنا</a></li>
-        </ul>
-      </div>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=61581618261479" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/laqay_a5/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@laqaya_riyadh" target="_blank"><i class="fab fa-tiktok"></i></a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 لقايا. جميع الحقوق محفوظة. | 
-        <a href="./Pages/privacy.html">سياسة الخصوصية</a> | 
-        <a href="./Pages/terms.html">الشروط والأحكام</a>
-      </p>
-    </div>
-  </div>
+<div class="footer-container">
+<div class="footer-content">
+<div class="footer-section">
+<div class="footer-logo">
+<span>لقايا</span>
+</div>
+<p>نحن في لقايا متخصصون في شراء الأثاث المستعمل بأفضل الأسعار مع خدمة سريعة وموثوقة تصل لحد باب منزلك.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul class="footer-links">
+<li><a href="./index.html">الرئيسية</a></li>
+<li><a href="./Pages/about.html">المدونة</a></li>
+<li><a href="./Pages/services.html">خدماتنا</a></li>
+<li><a href="./Pages/portfolio.html">أعمالنا</a></li>
+<li><a href="./Pages/contact.html">اتصل بنا</a></li>
+</ul>
+</div>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=61581618261479" target="_blank"><i class="fab fa-facebook"></i></a>
+<a href="https://www.instagram.com/laqay_a5/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@laqaya_riyadh?lang=en" target="_blank"><i class="fab fa-tiktok"></i></a>
+</div>
+<div class="footer-section">
+<h3>اتصل بنا</h3>
+<p>البريد الإلكتروني: laqayacompany@gmail.com</p>
+<p>الهاتف:  0531229390</p>
+<p>العنوان: الرياض، المملكة العربية السعودية</p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>
+    © 2025 لقايا. جميع الحقوق محفوظة. 
+    | <a href="./Pages/privacy.html">سياسة الخصوصية</a> 
+    | <a href="./Pages/terms.html">الشروط والأحكام</a>
+</p>
+</div>
+</div>
 </footer>
 
 <!-- Scripts -->
@@ -192,6 +328,6 @@
 
   setInterval(nextSlide, 3000);
 </script>
-
+<script src="/js/main.js"></script>
 </body>
 </html>
