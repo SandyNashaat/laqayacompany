@@ -1,90 +1,77 @@
-/* ==============================
-   Responsive Design
-   ============================== */
-
-/* تابلت وأصغر */
+/* الموبايل و التابلت */
 @media (max-width: 992px) {
-    .nav-menu {
-        position: fixed;
-        top: 70px;
-        right: -100%;
-        background-color: var(--primary-color);
-        width: 80%;
-        height: calc(100vh - 70px);
-        flex-direction: column;
-        padding: 20px;
-        transition: var(--transition);
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    }
-    
-    .nav-menu.active {
-        right: 0;
-    }
-    
-    .nav-menu li {
-        margin: 15px 0;
-    }
-    
-    .mobile-toggle {
-        display: flex;
-    }
-    
-    .hero h1 {
-        font-size: 2.2rem;
-    }
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    background-color: var(--primary-color);
+    width: 80%;
+    height: calc(100vh - 70px);
+    flex-direction: column;
+    padding: 20px;
+    transition: var(--transition);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu li {
+    margin: 15px 0;
+  }
+
+  .mobile-toggle {
+    display: flex;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .service-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
 }
 
-/* موبايل متوسط */
+/* الموبايل الصغير */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .service-icon {
-        height: 150px;
-        font-size: 3rem;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .service-icon {
+    height: 120px;
+    font-size: 2.5rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
 
-/* موبايل صغير جدًا */
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.5rem;
-        line-height: 1.4;
-    }
-
-    .section-title {
-        font-size: 1.6rem;
-    }
-
-    .service-icon {
-        height: 120px;
-        font-size: 2.5rem;
-    }
-
-    .nav-menu {
-        width: 100%; /* ياخد عرض الشاشة كله */
-    }
-
-    .footer-content {
-        padding: 10px;
-        text-align: center;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
+/* تصحيح الصور */
+img {
+  max-width: 100%;
+  height: auto;
 }
