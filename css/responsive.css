@@ -28,12 +28,22 @@
   /* Slider */
   /* .slider { height: 300px; } */
     .slider {
-        height: 300px; /* أقل من الشاشة الكبيرة */
+       
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+   
+ /* أقل من الشاشة الكبيرة */
     }
-    .slides {
-        height: 100%;
+   .slides {
+        width: 100%;
+        height: auto;
     }
-
+.card-slider {
+        max-width: 90%;
+        padding: 15px 20px;
+        font-size: 0.9rem;
+    }
     .contact-grid {
         grid-template-columns: 1fr; /* نخلي كل حاجة عمود واحد */
         gap: 30px; /* مسافة بين النموذج ومعلومات التواصل */
@@ -81,16 +91,21 @@
     height: 250px; /* ارتفاع أصغر للموبايل }*/
  
   .slider {
-        height: 250px; /* أصغر للموبايل */
+        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
+
     .slides {
-        height: 100%;
+        width: 100%;
+        height: auto;
     }
-    .slides img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* يخلي الصورة تغطي كامل مساحة السلايدر بدون تشويه */
-}
+
+    .card-slider {
+        max-width: 95%;
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
 
   .footer-content {
     flex-direction: column;
