@@ -26,8 +26,11 @@
   .service-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
 
   /* Slider */
-  .slider { height: 300px; }
+  /* .slider { height: 300px; } */
+   .slider { height: auto; }
+    .slides { height: auto; }
 }
+
 
 /* الموبايل الصغير */
 /* هيدر */
@@ -61,9 +64,11 @@
     padding: 15px;
   }
 
-  .slider {
-    height: 250px; /* ارتفاع أصغر للموبايل */
-  }
+  /* .slider {
+    height: 250px; /* ارتفاع أصغر للموبايل }*/
+ 
+  .slider { height: auto; }
+    .slides { height: auto; }
 
   .footer-content {
     flex-direction: column;
