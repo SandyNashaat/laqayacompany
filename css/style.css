@@ -77,105 +77,41 @@
     
    
 .slider-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
 }
 
 .slider {
-    width: 300%;
-    max-width: 1200px;
-    height: 350px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+  width: 100%;
+  max-width: 1100px;   /* خليتها أوسع من الأول */
+  height: 400px;       /* كبرت الارتفاع كمان */
+  margin: 0 auto;      /* ده اللي بيخليها تتوسّط في النص */
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
 }
 
 .slides {
-    /* width: 100%; */
-    /* height: 100%; */
-    height: 350px;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .slides.active {
-    opacity: 1;
+  opacity: 1;
 }
 
-.card-slider {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(89, 89, 89, 0.6);
-    color: #fff;
-    padding: 20px 25px;
-    border-radius: 12px;
-    max-width: 350px;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 2;
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* يظبط الصورة جوه الكارد */
+  border-radius: 15px;
 }
-
-.card-slider h2 {
-    font-size: 20px;
-    margin-bottom: 12px;
-}
-
-.card-slider p {
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.card-slider a.read-more {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    background: linear-gradient(90deg, #ff7e5f, #feb47b);
-    padding: 10px 20px;
-    border-radius: 8px;
-    margin-top: 10px;
-}
-
-.card-slider a.read-more:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(255,126,95,0.6);
-}
-
-.card-slider:hover {
-    transform: translate(-50%, -50%) scale(1.05);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
-}
-
-.dots {
-    position: absolute;
-    bottom: 15px;
-    width: 100%;
-    text-align: center;
-}
-
-.dots span {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin: 0 5px;
-    background: #fff;
-    border-radius: 50%;
-    cursor: pointer;
-    opacity: 0.6;
-    transition: 0.3s;
-}
-
-.dots span.active {
-    background: #ff9800;
-    opacity: 1;
-}
-
 
         /* باقي الأنماط */
         .section-title {
