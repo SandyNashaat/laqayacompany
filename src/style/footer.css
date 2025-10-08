@@ -1,0 +1,140 @@
+/*
+  تعريف متغير اللون الأساسي (Accent Color) لضمان عمل الشرطة السفلية
+  تم اختيار اللون الأصفر/الذهبي بناءً على استخدامك له في الأيقونات الاجتماعية
+*/
+:root {
+  --accent-color: #e9b949; /* لون ذهبي/أصفر */
+  --footer-bg: #2c3440; /* لون خلفية التذييل */
+  --text-color: #fff;
+  --light-text-color: #ddd;
+}
+
+/* 1. التذييل الأساسي */
+footer {
+  background: var(--footer-bg);
+  color: var(--text-color);
+  padding: 40px 20px 20px;
+  /* تطبيق اتجاه النص من اليمين ليتناسب مع اللغة العربية */
+  direction: rtl; 
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 2. محتوى الأقسام (تجاوبي) */
+.footer-content {
+  /* تغيير بسيط في الحد الأدنى للعرض ليتناسب مع شاشات الجوال */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* فاصل بين المحتوى والجزء السفلي */
+}
+
+/* 3. شعار التذييل */
+.footer-logo {
+  font-size: 2rem; /* زيادة حجم الشعار قليلاً */
+  font-weight: 800;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  color: var(--accent-color); /* إبراز اسم الموقع بلون مميز */
+}
+
+.footer-logo img {
+  height: 45px; /* زيادة حجم الصورة قليلاً */
+  margin-left: 12px;
+  border-radius: 4px; /* إضافة زوايا بسيطة للشعار إذا كانت الصورة مربعة */
+}
+
+/* 4. عناوين الأقسام */
+.footer-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 25px; /* زيادة التباعد */
+  position: relative;
+  padding-bottom: 10px;
+  color: var(--light-text-color); /* التأكد من أن العنوان فاتح */
+}
+
+/* الخط تحت العنوان */
+.footer-section h3:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px; /* زيادة طول الخط */
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 2px; /* خط مدور قليلاً */
+}
+
+.footer-section p {
+  margin-bottom: 15px;
+  opacity: 0.9;
+  line-height: 1.7; /* تحسين قراءة النص */
+}
+
+/* 5. الروابط */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px; /* زيادة التباعد بين الروابط */
+}
+
+.footer-links a {
+  color: var(--light-text-color);
+  text-decoration: none;
+  transition: color 0.3s ease, padding-right 0.3s ease;
+  display: block; /* لضمان أن مساحة النقر كاملة */
+}
+
+.footer-links a:hover {
+  color: var(--accent-color);
+  padding-right: 8px; /* زيادة الإزاحة عند التمرير */
+}
+
+/* 6. الأيقونات الاجتماعية */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row; /* عرض الأيقونات بجانب بعضها افتراضيًا */
+  gap: 15px; /* زيادة الفراغ بين الأيقونات */
+}
+
+.social-icons a {
+  color: var(--light-text-color);
+  font-size: 30px;
+  transition: all 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--accent-color); /* استخدام اللون الأساسي المحدد */
+  transform: translateY(-3px) scale(1.1); /* تأثير رفع بسيط */
+}
+
+/* 7. الجزء السفلي لحقوق النشر */
+.footer-bottom {
+  text-align: center;
+  padding: 15px 0 5px;
+  font-size: 15px;
+  color: var(--light-text-color);
+}
+
+.footer-bottom a {
+  color: var(--accent-color);
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+  color: var(--text-color);
+  text-decoration: underline;
+}
